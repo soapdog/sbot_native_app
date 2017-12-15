@@ -21,7 +21,7 @@ The current implemented commands are:
 This commands returns the default identity. It doesn't require any data parameter.
 
 ### publish
-This commands calls `sbot.publish()` passing the `data` argument to the call. It can be used to post to your feed. For sample usage, check out the [Share on Scuttlebutt WebExtension]()
+This commands calls `sbot.publish()` passing the `data` argument to the call. It can be used to post to your feed. For sample usage, check out the [Share on Scuttlebutt WebExtension](https://github.com/soapdog/webextension-share-on-scuttlebutt)
 
 
 # Dependencies
