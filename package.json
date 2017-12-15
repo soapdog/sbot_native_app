@@ -1,0 +1,28 @@
+{
+  "name": "sbot-native-app",
+  "version": "1.0.0",
+  "description": "A native app that supports the protocols used by WebExtensions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "check-win": "node check-configuration-win.js",
+    "setup-win": "node setup-win.js"
+
+  },
+  "keywords": [
+    "ssbc",
+    "scuttlebutt",
+    "scuttlebot",
+    "webextension",
+    "addon",
+    "firefox"
+  ],
+  "author": "Andre Alves Garzia <andre@andregarzia.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chrome-native-messaging": "^0.2.0",
+    "regedit": "^2.2.7",
+    "ssb-party": "^0.5.1",
+    "tiny-router": "^0.1.4"
+  }
+}
