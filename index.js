@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/local/bin/node
 
 const createSsbParty = require('ssb-party');
 const readline = require('readline');
@@ -22,6 +22,7 @@ function getReplyFor(msg, sbot, cb) {
         break;
     }
 }
+
 createSsbParty(function (err, sbot) {
     if (err) {
         console.error(err);

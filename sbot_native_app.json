@@ -1,9 +1,1 @@
-{
-  "name": "sbot_native_app",
-  "description": "Native app companion to sbot webextensions",
-  "path": "C:\\Users\\soapdog\\prog\\ssbc\\firefox-support\\sbot-native-app\\app.bat",
-  "type": "stdio",
-  "allowed_extensions": [
-    "share_on_scuttlebutt@andregarzia.com"
-  ]
-}
+{"name":"sbot_native_app","description":"Native app companion to sbot webextensions","path":"/Users/soapdog/prog/ssbc/sbot_native_app/index.js","type":"stdio","allowed_extensions":["share_on_scuttlebutt@andregarzia.com"]}

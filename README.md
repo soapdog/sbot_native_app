@@ -48,7 +48,7 @@ or
 $ npm run setup
 ```
 
-Depending if you're running Windows 10 or other operating system.
+Depending if you're running Windows 10 or other operating system. Also, if you are running under a unix-like system, you will need to double check the shebang invocation on top of the `index.js` file to make sure that it points to your NodeJS location. I tried using `env` there but it didn't work when started from inside Firefox, so it is hardcoded to the default location of NodeJS installation.
 
 Be aware that the setup procedure will place hardcoded paths in files critical for running this app. **If you move this application to a different folder or rename any folder in its path, you'll need to run this setup again.**
 

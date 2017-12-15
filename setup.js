@@ -3,12 +3,15 @@ if (process.platform == "win32") {
     process.exit(1);
 }
 
-var macPath = "~/Library/Application Support/Mozilla/NativeMessagingHosts/sbot_native_app.json";
-var linuxPath = "~/.mozilla/native-messaging-hosts/sbot_native_app.json";
+var homedir = require('os').homedir();
+var macPath = homedir + "/Library/Application Support/Mozilla/NativeMessagingHosts/sbot_native_app.json";
+var linuxPath = homedir + "/.mozilla/native-messaging-hosts/sbot_native_app.json";
 var manifestPath = process.platform == "darwin" ? macPath : linuxPath;
-var appPath = __dirname + "\\index.js";
-var localManifestFile = __dirname + "\\sbot_native_app.json";
+var manifestFolderPath = manifestPath.replace("sbot_native_app.json", "");
+var appPath = __dirname + "/index.js";
+var localManifestFile = __dirname + "/sbot_native_app.json";
 var fs = require("fs");
+var mkdirp = require("mkdirp");
 
 if (!fs.existsSync(appPath)) {
     console.log("[ERROR] Application not found at: ", appPath);
@@ -34,6 +37,7 @@ if (!fs.existsSync(applicationLauncherPath)) {
     console.log("[OK] Application found at the correct location", applicationLauncherPath);
 }
 
+mkdirp.sync(manifestFolderPath);
 fs.writeFileSync(manifestPath, JSON.stringify(manifest));
 
 console.log("[OK] Wrote manifest path to registry.\n[INFO] Try: npm run check");

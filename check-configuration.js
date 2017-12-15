@@ -3,9 +3,9 @@ if (process.platform == "win32") {
     process.exit(1);
 }
 
-
-var macPath = "~/Library/Application Support/Mozilla/NativeMessagingHosts/sbot_native_app.json";
-var linuxPath = "~/.mozilla/native-messaging-hosts/sbot_native_app.json";
+var homedir = require('os').homedir();
+var macPath = homedir + "/Library/Application Support/Mozilla/NativeMessagingHosts/sbot_native_app.json";
+var linuxPath = homedir + "/.mozilla/native-messaging-hosts/sbot_native_app.json";
 var manifestPath = process.platform == "darwin" ? macPath : linuxPath;
 var fs = require("fs");
 

@@ -6,8 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "check-win": "node check-configuration-win.js",
-    "setup-win": "node setup-win.js"
-
+    "setup-win": "node setup-win.js",
+    "check": "node check-configuration.js",
+    "setup": "node setup.js"
   },
   "keywords": [
     "ssbc",
@@ -24,6 +25,7 @@
     "ssb-party": "^0.5.1"
   },
   "optionalDependencies": {
+    "mkdirp": "^0.5.1",
     "regedit": "^2.2.7"
   }
 }
