@@ -1,3 +1,6 @@
 @echo off
 
-call node C:\Users\soapdog\prog\ssbc\firefox-support\sbot-native-app\index.js
+SET fullpath=%~dp0
+SET mypath=%fullpath:~0,-1%
+
+call node %mypath%\index.js
